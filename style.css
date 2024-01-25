@@ -57,6 +57,16 @@ section.main {
     border: 0;
 }
 
+.items-menu-mobile {
+    display: none;
+    width: 50%;
+    text-align: right;
+}
+
+.items-menu i {
+    cursor: pointer;
+}
+
 .mockup {
     padding-top: 100px;
     width: 100%;
@@ -226,7 +236,7 @@ section.depoimentos {
 
 section.depoimentos>h1 {
     text-align: center;
-    font-size: 50px
+    font-size: 40px
 }
 
 .container-slider {
@@ -300,7 +310,106 @@ li.slick-active button {
     outline: none;
 }
 
+section.contato {
+    padding: 40px 0;
+    text-align: center;
+
+}
+
+section.contato h1 {
+    font-size: 50px;
+}
+
+section.contato form {
+    width: 100%;
+}
+
+.contato input[type=text],
+.contato input[type=email] {
+    width: 100%;
+    height: 60px;
+    margin: 15px 0;
+    background-color: #FCFDFF;
+    border: 1px solid #C3CCE8;
+    border-radius: 10px;
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+.contato textarea {
+    width: 100%;
+    height: 250px;
+    margin: 15px 0;
+    background-color: #FCFDFF;
+    border: 1px solid #C3CCE8;
+    border-radius: 10px;
+    padding: 10px;
+    resize: vertical;
+    font-size: 20px;
+}
+
+.contato input[type=submit] {
+    width: 100%;
+    height: 60px;
+    margin: 15px 0;
+    background-color: #255AFF;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+footer {
+    padding: 10px 0;
+    color: white;
+    background-color: #255AFF;
+}
+
+.texto-footer {
+    width: 50%;
+    padding: 8px 0;
+}
+
 @media screen and (max-width: 768px) {
+    .items-menu-mobile {
+        display: block;
+    }
+
+    .menu-mobile {
+        display: none;
+        transition: 1s;
+        position: absolute;
+        left: 0;
+        top: 65px;
+        width: 100%;
+        height: 100%;
+        padding: 20px 0;
+        text-align: center;
+        background-color: #0F3FD3;
+    }
+
+    .show {
+        display: block;
+    }
+    .hiden {
+        display: none;
+    }
+
+    .menu-mobile a {
+        text-align: center;
+        display: block;
+        margin: 15px 0;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .menu .items-menu {
+        display: none;
+    }
+
     .diferenciais {
         flex-wrap: wrap;
     }
@@ -326,5 +435,22 @@ li.slick-active button {
     .img-beneficios {
         width: 100%;
         margin-bottom: 30px;
+    }
+
+    .texto-footer {
+        width: 100%;
+        text-align: center;
+        padding: 8px 0;
+    }
+
+    footer .items-menu {
+        width: 100%;
+        text-align: center;
+    }
+
+    footer .items-menu a {
+        display: block;
+        text-align: center;
+        margin: 10px 0;
     }
 }

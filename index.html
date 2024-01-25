@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto | Agencia Bold</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -22,6 +22,15 @@
                     <a href="#">Por que Nós?</a>
                     <a href="#">Depoimento</a>
                     <a href="#" class="contact-btn">Entre em Contato</a>
+                </div>
+                <div class="items-menu-mobile">
+                    <i class="fa fa-bars" style="font-size:32px;color:white; top: 15px; position: relative;"></i>
+                    <div class="menu-mobile">
+                        <a href="#">Início</a>
+                        <a href="#">Por que Nós?</a>
+                        <a href="#">Depoimento</a>
+                        <a href="#" class="contact-btn">Entre em Contato</a>
+                    </div>
                 </div>
             </div>
             <div class="mockup">
@@ -150,6 +159,30 @@
             </div>
         </div>
     </section>
+    <section class="contato">
+        <h1>Entre em Contato</h1>
+        <div style="max-width: 900px;" class="center">
+            <form action="#" method="post">
+                <input type="text" placeholder="Name">
+                <input type="email" name="email" id="email" placeholder="Email">
+                <textarea name="mensage" id="mensage" cols="30" placeholder="Message"></textarea>
+                <input type="submit" name="ação" value="Enviar">
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div style="max-width: 1280px;" class="center">
+            <div class="texto-footer">
+                <p>Todos os direiros reservados a Danki Code</p>
+            </div>
+            <div class="items-menu">
+                <a href="#">Início</a>
+                <a href="#">Por que Nós?</a>
+                <a href="#">Depoimento</a>
+                <a href="#" class="contact-btn">Entre em Contato</a>
+            </div>
+        </div>
+    </footer>
     <script src="jquery.js"></script>
     <script src="slick.min.js"></script>
     <script>
@@ -171,6 +204,22 @@
                     }
                 }],
         });
+    </script>
+    <script>
+        var menuBtn = document.querySelector('.items-menu-mobile i');
+        menuBtn.addEventListener('click',()=>{
+            let itemsMenu = document.querySelector(".menu-mobile");
+
+            if (itemsMenu.classList.contains('show')){
+                itemsMenu.classList.remove('show');
+                itemsMenu.classList.add('hiden');
+            } else {
+                itemsMenu.classList.remove('hiden');
+                itemsMenu.classList.add('show');
+            }
+            
+        });
+        
     </script>
 </body>
 
