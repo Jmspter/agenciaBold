@@ -6,117 +6,107 @@
     font-family: 'Ubuntu', sans-serif;
 }
 
-.center {
-    display: flex;
-    max-width: 1100px;
-    padding: 0 2%;
-    margin: 0 auto;
-    flex-wrap: wrap;
+body {
+    background-color: black;
+    color: white;
 }
 
-section.main {
+menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
     background-image: url('images/bg.png');
     background-position: center;
     background-size: cover;
     padding: 20px 0 80px 0;
-}
-
-.menu {
-    display: flex;
-    width: 100%;
-}
-
-.logo-menu {
-    width: 50%;
-}
-
-.items-menu {
-    width: 50%;
-    text-align: right;
-}
-
-.items-menu a {
-    font-weight: bold;
-    color: white;
-    text-decoration: none;
-    display: inline-block;
-    padding: 0 10px;
-}
-
-.items-menu a:hover {
-    border-bottom: 2px solid #ffdd33;
-}
-
-.items-menu a.contact-btn {
-    background-color: #0f3fd3;
-    padding: 10px 10px;
-    border-radius: 10px
-}
-
-.items-menu a.contact-btn:hover {
-    border: 0;
-}
-
-.items-menu-mobile {
-    display: none;
-    width: 50%;
-    text-align: right;
-}
-
-.items-menu i {
-    cursor: pointer;
-}
-
-.mockup {
-    padding-top: 100px;
-    width: 100%;
-    color: white;
     text-align: center;
 }
 
-.mockup h1 {
-    font-size: 40px;
+menu a img {
+    max-width: 65%;
 }
 
-.mockup img {
-    margin-top: 50px;
-    max-width: 100%;
+nav a {
+    position: relative;
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav .normie:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -5px;
+    left: 0;
+    background-color: #ffc700;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+nav .normie:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.c-btn {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #ffc700;
+    color: black;
+}
+
+.slogan h1 {
+    font-size: 50px;
+}
+
+menu img {
+    max-width: 80%;
 }
 
 section.marcas {
     padding: 100px 0;
 }
 
+.navegadores {
+    display: flex;
+    justify-content: space-around;
+}
+
 section.marcas img {
-    width: 20%;
+    max-width: 10%;
 }
 
 section.porque-nos {
     padding: 40px 0;
-    background-color: #FBFCFE;
+    background-color: #1e1e1f;
 }
 
-section.porque-nos>.center {
-    max-width: 1280px;
-}
 
-section.porque-nos>.center>h2 {
+section.porque-nos .slogan >h2 {
     font-size: 64px;
     text-align: center;
-    width: 100%;
 }
 
-section.porque-nos>.center>p {
+section.porque-nos .slogan >p {
     font-size: 14px;
-    color: #7E92AC;
+    color: #ffc700;
     text-align: center;
-    width: 100%;
+    margin: 10px 0;
 }
 
 .diferenciais {
     display: flex;
     max-width: 100%;
-    justify-content: center;
+    justify-content: space-around;
     margin-top: 50px;
 }
 
@@ -126,7 +116,6 @@ section.porque-nos>.center>p {
     border-radius: 20px;
     padding: 10px 20px;
     width: 31%;
-    margin-right: 2%;
 }
 
 .box-diferenciais h3 {
@@ -170,20 +159,20 @@ section.cta a {
     max-width: 70%;
     font-weight: bold;
     font-size: 20px;
-    background: #FFDD33;
+    background: #ffc700;
     border-radius: 10px;
     text-decoration: none;
     color: #0F3FD3;
 }
 
 section.beneficios {
+    display: flex;
     padding: 50px 0;
     margin-top: 30px;
+    justify-content: center;
 }
 
-section.beneficios>.center {
-    max-width: 1280px;
-}
+
 
 .lista-beneficios {
     width: 40%;
@@ -221,7 +210,7 @@ section.beneficios>.center {
 }
 
 .img-beneficios {
-    width: 60%;
+    width: 40%;
 }
 
 
@@ -230,7 +219,10 @@ section.beneficios>.center {
 }
 
 section.depoimentos {
-    background-color: #FBFCFE;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1e1e1f;
     padding: 40px 0;
 }
 
@@ -242,6 +234,7 @@ section.depoimentos>h1 {
 .container-slider {
     overflow: hidden;
     padding: 40px 0;
+    width: 65%;
 }
 
 .container-slider-single {
@@ -311,9 +304,11 @@ li.slick-active button {
 }
 
 section.contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 40px 0;
     text-align: center;
-
 }
 
 section.contato h1 {
@@ -321,7 +316,7 @@ section.contato h1 {
 }
 
 section.contato form {
-    width: 100%;
+    width: 80%;
 }
 
 .contato input[type=text],
@@ -365,53 +360,40 @@ footer {
     padding: 10px 0;
     color: white;
     background-color: #255AFF;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .texto-footer {
-    width: 50%;
+    text-align: center;
     padding: 8px 0;
 }
 
+footer nav {
+    width: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+footer nav a {
+    margin: 20px 0;
+}
+
 @media screen and (max-width: 768px) {
-    .items-menu-mobile {
+    
+    nav a {
         display: block;
-    }
-
-    .menu-mobile {
-        display: none;
-        transition: 1s;
-        position: absolute;
-        left: 0;
-        top: 65px;
-        width: 100%;
-        height: 100%;
-        padding: 20px 0;
-        text-align: center;
-        background-color: #0F3FD3;
-    }
-
-    .show {
-        display: block;
-    }
-    .hiden {
-        display: none;
-    }
-
-    .menu-mobile a {
-        text-align: center;
-        display: block;
-        margin: 15px 0;
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-    }
-
-    .menu .items-menu {
-        display: none;
+        margin: 20px 0;
     }
 
     .diferenciais {
         flex-wrap: wrap;
+        gap: 30px;
     }
 
     .box-diferenciais {
@@ -419,21 +401,35 @@ footer {
         margin-right: 0;
     }
 
-    section.marcas>.center {
-        flex-wrap: nowrap;
-        flex-direction: column;
-        gap: 20px;
-        align-items: center;
+    section.marcas {
+        overflow: hidden;
+        position: relative;
     }
 
-    section.marcas img {
-        max-width: 250px;
-        width: 100%;
+    .navegadores {
+        display: flex;
+        animation: marquee 15s linear infinite;
+    }
+
+    @keyframes marquee {
+        0% {
+            transform: translateX(100%);
+        }
+
+        100% {
+            transform: translateX(-115%);
+        }
+    }
+
+
+    section.beneficios {
+        flex-direction: column-reverse;
     }
 
     .lista-beneficios,
     .img-beneficios {
-        width: 100%;
+        text-align: center;
+        width: 80%;
         margin-bottom: 30px;
     }
 
@@ -441,6 +437,10 @@ footer {
         width: 100%;
         text-align: center;
         padding: 8px 0;
+    }
+
+    section.contato form {
+        width: 80%;
     }
 
     footer .items-menu {
